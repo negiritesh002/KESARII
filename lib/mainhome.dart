@@ -38,7 +38,6 @@ class _HomeState extends State<Home> {
         backgroundColor: Color(0xFF0F52BA),
       ),
       body: CircleAvatar(
-
       ),
       bottomNavigationBar: Container(
       ),
