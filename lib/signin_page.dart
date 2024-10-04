@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:validate/Signup_page.dart';
+import 'package:validate/mainhome.dart';
 
 class Signinpage extends StatefulWidget {
   const Signinpage({super.key});
@@ -14,7 +15,7 @@ class _SigninpageState extends State<Signinpage> {
     return Scaffold(
       appBar: AppBar(
           iconTheme: IconThemeData(
-            color: Colors.red,
+            color: Colors.white,
           ),
           backgroundColor: Color(0xFF0F52BA)),
       body: SingleChildScrollView(
@@ -68,7 +69,11 @@ class _SigninpageState extends State<Signinpage> {
                       style: ButtonStyle(
                           backgroundColor:
                               WidgetStatePropertyAll(Color(0xFF0F52BA))),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) {
+                          return Home();
+                        },));
+                      },
                       child: Text(
                         "Sign In",
                         style: TextStyle(color: Colors.white),

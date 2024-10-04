@@ -16,6 +16,7 @@ class _SignUpState extends State<SignUp> {
         backgroundColor: Color(0xFF0F52BA),
       ),
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Container(
           child: Column(
             children: [
@@ -53,7 +54,7 @@ class _SignUpState extends State<SignUp> {
                       padding: const EdgeInsets.only(right: 10.0),
                       child: TextFormField(
                         decoration: InputDecoration(
-                            labelText: "Last Name",
+                            labelText: "Middle Name",
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10.0))),
                       ),
@@ -74,7 +75,7 @@ class _SignUpState extends State<SignUp> {
                       padding: const EdgeInsets.only(right: 10.0,left: 5),
                       child: TextFormField(
                         decoration: InputDecoration(
-                            labelText: "City",
+                            labelText: "Last Name",
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10.0))),
                       ),
@@ -86,7 +87,40 @@ class _SignUpState extends State<SignUp> {
                       padding: const EdgeInsets.only(right: 10.0),
                       child: TextFormField(
                         decoration: InputDecoration(
-                            labelText: "State",
+                            labelText: "Nick Name",
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10.0))),
+                      ),
+                    ),
+                  ),
+
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 180,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 10.0,left: 5),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                            labelText: "Phone Number",
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10.0))),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 180,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                            labelText: "E-mail Address",
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10.0))),
                       ),
@@ -102,58 +136,103 @@ class _SignUpState extends State<SignUp> {
                 padding: const EdgeInsets.only(left: 20.0,right: 20),
                 child: TextFormField(
                   decoration: InputDecoration(
-                      labelText: "Address",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0))),
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20.0,right: 20),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      labelText: "Country",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0))),
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20.0,right: 20),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      labelText: "Mobile No",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0))),
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20.0,right: 20),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      labelText: "Email ID",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0))),
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20.0,right: 20),
-                child: TextFormField(
-                  decoration: InputDecoration(
                       labelText: "Password",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0))),
                 ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0,right: 20),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      labelText: "Permanent Address",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0))),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0,right: 20),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      labelText: "Current Address",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0))),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0,right: 20),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      labelText: "Contact No.",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0))),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0,right: 20),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      labelText: "Type of Society",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0))),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0,right: 20),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      labelText: "Name Of The Society",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0))),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 180,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 10.0,left: 5),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                            labelText: "Block/Tower",
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10.0))),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 180,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                            labelText: "Flat/Villa Number",
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10.0))),
+                      ),
+                    ),
+                  ),
+
+                ],
               ),
               SizedBox(
                 height: 20,
@@ -172,7 +251,7 @@ class _SignUpState extends State<SignUp> {
                         style: TextStyle(color: Colors.white),
                       )),
                 ),
-              )
+              ),
             ],
           ),
         ),
