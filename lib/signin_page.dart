@@ -13,6 +13,19 @@ class Signinpage extends StatefulWidget {
 class _SigninpageState extends State<Signinpage> {
 
   TextEditingController _EmailController = TextEditingController();
+  TextEditingController _PasswordController = TextEditingController();
+
+  String _Email = '';
+  String _Password = '';
+
+
+  @override
+  void dispose() {
+    _EmailController.dispose();
+    _PasswordController.dispose();
+
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +59,7 @@ class _SigninpageState extends State<Signinpage> {
                 height: 50,
               ),
               TextFormField(
+                controller: _EmailController,
                 decoration: InputDecoration(
                     labelText: "E-mail",
                     border: OutlineInputBorder(
@@ -53,6 +67,7 @@ class _SigninpageState extends State<Signinpage> {
               ),
               SizedBox(height: 20),
               TextFormField(
+                controller: _PasswordController,
                 decoration: InputDecoration(
                     labelText: "Password",
                     border: OutlineInputBorder(
@@ -65,11 +80,15 @@ class _SigninpageState extends State<Signinpage> {
                   child: ElevatedButton(
                       style: ButtonStyle(
                           backgroundColor:
-                              WidgetStatePropertyAll(Color(0xFF0F52BA))),
+                              WidgetStatePropertyAll(Color(0xFF0F52BA,))),
                       onPressed: () {
+                        setState(() {
+                          _Email = _EmailController.text;
+                          _Password = _PasswordController.text;
+                        });
                         Navigator.push(context, MaterialPageRoute(builder: (context) {
-                          return Home();
-                        },));
+                           return Home();
+                           },));
                       },
                       child: Text(
                         "Sign In",
@@ -100,9 +119,7 @@ class _SigninpageState extends State<Signinpage> {
                         onPressed: () {},
                         child: Row(
                           children: [
-                            Image.network("https://imgs.search.brave.com/5Ocquja-Nzsi1hmN1Aw-DTE0W3WHDmxwUYkxm-2_NAA/"
-                                "rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/bG9nb3BuZy5jb20v/aW1hZ2VzL2FsbF9p/bWcvMTY1Nzk1NTA3/OWd"
-                                "vb2dsZS1pY29u/LXBuZy5wbmc",width: 30,height: 30,),
+                            Image.asset("image/google.webp",width: 30,height: 30,),
                             SizedBox(width: 10,),
                             Text("Google",style: TextStyle(color: Colors.white),)
                           ],
@@ -120,9 +137,7 @@ class _SigninpageState extends State<Signinpage> {
                         onPressed: () {},
                         child: Row(
                           children: [
-                            Image.network("https://imgs.search.brave.com/wCrDzp5BZ3Ra6osld8Edv2gSrsgaoyH1lNj4uHCi"
-                                "6hI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbHVz/cG5nLmNvbS9pbWct/cG5nL2ZhY2Vib29r/LWhkLXB"
-                                "uZy1mYWNl/Ym9vay1zb2NpYWwt/c29jaWFsLW1lZGlh/LWljb24tMjU2LnBu/Zw",width: 30,height: 30,),
+                            Image.asset("image/facebook.webp",width: 30,height: 30,),
                             SizedBox(width: 5,),
                             Text("Facebook",style: TextStyle(color: Colors.white),)
                           ],
@@ -141,7 +156,7 @@ class _SigninpageState extends State<Signinpage> {
                       },
                     ));
                   },
-                  child: Text("Create New Account!",style:TextStyle(color: Colors.black)))
+                  child: Text("Create New Account!",style:TextStyle(color: Colors.black))),
             ],
           ),
         )),
