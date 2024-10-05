@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:validate/Signup_page.dart';
 import 'package:validate/signin_page.dart';
+
+import 'Signup_page.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -11,6 +12,7 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   @override
+
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
@@ -31,13 +33,19 @@ class _HomepageState extends State<Homepage> {
               Text(
                 "KESARII",
                 style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 45,
                     fontWeight: FontWeight.w900,
-                    color: Color(0xFF0F52BA),
-                    letterSpacing: 2),
+                    color: Color(0xFFFFF0F5),
+                    letterSpacing: 2,
+                  shadows: [Shadow(
+                    offset: Offset(4.0, 4.0),
+                    blurRadius: 20.0,
+                    color: Colors.black
+                  )]
+                ),
               ),
               SizedBox(
-                height: 80,
+                height: 60,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 30, right: 30),
@@ -48,7 +56,7 @@ class _HomepageState extends State<Homepage> {
                       style: ButtonStyle(
                           elevation: WidgetStatePropertyAll(4),
                           backgroundColor:
-                              WidgetStatePropertyAll(Color(0xFF0F52BA))),
+                          WidgetStatePropertyAll(Color(0xFF0F52BA))),
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(
                           builder: (context) {
@@ -74,7 +82,7 @@ class _HomepageState extends State<Homepage> {
                     style: TextStyle(
                         letterSpacing: 1,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black54),
+                        color: Colors.white),
                   ),
                   Expanded(child: Divider()),
                 ]),
@@ -91,7 +99,7 @@ class _HomepageState extends State<Homepage> {
                       style: ButtonStyle(
                           elevation: WidgetStatePropertyAll(4),
                           backgroundColor:
-                              WidgetStatePropertyAll(Color(0xFF0F52BA))),
+                          WidgetStatePropertyAll(Color(0xFF0F52BA))),
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(
                           builder: (context) {
@@ -110,7 +118,7 @@ class _HomepageState extends State<Homepage> {
               ),
               Text(
                 "Sign Up To Create New Account",
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
               )
             ],
           ),

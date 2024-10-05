@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:validate/Homepage.dart';
-import 'package:validate/signin_page.dart';
 import 'package:flutter/services.dart';
+
+import 'Homepage.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -24,6 +24,10 @@ class _validatorState extends State<UI> {
   }
 
   Widget build(BuildContext context) {
-    return Scaffold(body: Homepage());
+    return Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage("image/i14.jpg"),fit: BoxFit.cover, )
+        ),
+        child: Scaffold( backgroundColor: Colors.transparent,body: Homepage()));
   }
 }

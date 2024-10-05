@@ -35,6 +35,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  http: ^1.2.2
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +65,22 @@ flutter:
     - image/KESARI.jfif
     - image/facebook.webp
     - image/google.webp
+    - image/DefaultProfile.webp
+    - image/i1.jfif
+    - image/i2.jfif
+    - image/i3.jpg
+    - image/i4.jfif
+    - image/i5.jfif
+    - image/i6.jfif
+    - image/i7.jfif
+    - image/i8.jpg
+    - image/i9.jfif
+    - image/i10.jpg
+    - image/i11.jpg
+    - image/i12.png
+    - image/i13.jpg
+    - image/i14.jpg
+    - image/i15.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
