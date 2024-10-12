@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'Signup_page.dart';
-import 'mainhome.dart';
+import '../Signupdirectory/Signup_page.dart';
+import '../home/mainhome.dart';
 
 class Signinpage extends StatefulWidget {
   const Signinpage({super.key});

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:validate/mainhome.dart';
+import 'package:validate/home/mainhome.dart';
 
-import 'signin_page.dart';
+import '../signIndirectory/signin_page.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -363,6 +363,7 @@ class _SignUpState extends State<SignUp> {
                         style: ButtonStyle(
                             backgroundColor: WidgetStatePropertyAll(Color(0xFF0F52BA))),
                         onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Signinpage()));
                           Navigator.push(context, MaterialPageRoute(builder: (context) => Home(firstName: _FirstName),));
                           setState(() {
                             _FirstName = _FirstNameController.text;
@@ -383,7 +384,7 @@ class _SignUpState extends State<SignUp> {
                           _signup();
                         },
                         child: Text(
-                          "Sign In",
+                          "Sign Up",
                           style: TextStyle(color: Colors.white),
                         )),
                   ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:validate/signin_page.dart';
+import 'package:validate/signIndirectory/signin_page.dart';
 
-import 'Signup_page.dart';
+import '../Signupdirectory/Signup_page.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
