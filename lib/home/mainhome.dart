@@ -13,6 +13,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
+  int myindex = 0;
+
 
   final List<String> items = [
     'My Profile',
@@ -57,6 +59,10 @@ class _HomeState extends State<Home> {
         ),
       ),
       appBar: AppBar(
+        actions: [Padding(
+          padding: const EdgeInsets.only(right: 20.0),
+          child: Icon(Icons.notification_add,color: Colors.white,),
+        )],
         automaticallyImplyLeading: false,
         title:
         Row(
@@ -135,124 +141,130 @@ class _HomeState extends State<Home> {
                     width: double.infinity,
                     child: Padding(
                       padding: const EdgeInsets.only(left: 15,right: 15),
-                      child: Card(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Container(
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 15),
-                                child: Text("Payment due : ₹ 5000", style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),),
-                              ),
-        
-                              SizedBox(
-                                height: 50,
-                                width: 120,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 10),
-                                  child: ElevatedButton(
-                                      style: ButtonStyle(
-                                          backgroundColor: WidgetStatePropertyAll(Color(
-                                              0xFFDC0E0E))),
-                                      onPressed: () {
-        
-                                      },
-                                      child: Text(
-                                        "Pay now",
-                                        style: TextStyle(color: Colors.white),
-                                      )),
-                                ),
-                              ),
-                            ],
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Card(
+                          elevation: 4,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
                           ),
-                        ),
-                        ),
+                          child: Container(
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 15),
+                                  child: Text("Payment due : ₹ 5000", style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),),
+                                ),
+
+                                SizedBox(
+                                  height: 50,
+                                  width: 120,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 10),
+                                    child: ElevatedButton(
+                                        style: ButtonStyle(
+                                            backgroundColor: WidgetStatePropertyAll(Color(
+                                                0xFFDC0E0E))),
+                                        onPressed: () {
+
+                                        },
+                                        child: Text(
+                                          "Pay now",
+                                          style: TextStyle(color: Colors.white),
+                                        )),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          ),
+                      ),
                     ),
                   ),
                   SizedBox(height: 10,),
                  Padding(
                    padding: const EdgeInsets.only(left: 10,right: 10),
-                   child: Card(
-                     elevation: 4,
-                     shape: RoundedRectangleBorder(
-                       borderRadius: BorderRadius.circular(15),
-                     ),
-                     child: Column(
-                       children: [
-                         Text("Messages",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-                         SizedBox(height: 15,),
-                         SizedBox(
-                           height: 65,
-                           child: Padding(
-                             padding: const EdgeInsets.only(left: 15.0,right: 15),
-                             child: Card(
-                               color: Color(0xFFE3E4FA),
-                               elevation: 4,
-                               shape: RoundedRectangleBorder(
-                                 borderRadius: BorderRadius.circular(15),
-                               ),
-                               child: Row(
-                                 mainAxisAlignment: MainAxisAlignment.center,
-                                 children: [
-                                   CircleAvatar(
-                                     radius: 25,
-                                     backgroundColor: Color(0xFF0F52BA),
-                                     child: Text("U1",style: TextStyle(fontSize: 20,color: Colors.white),),
-                                   ),
-                                   Padding(
-                                     padding: const EdgeInsets.only(left: 20,right: 20),
-                                     child: Text("User 1 [Flat 1] : Message 1",style: TextStyle(
-                                         fontWeight: FontWeight.bold,fontSize: 18
-                                     ),),
-                                   )
-                                 ],
-                               ),
-                             ),
-                           ),
-                         ),
-                         SizedBox(height: 2,),
-                         SizedBox(
-                           height: 65,
-                           child: Padding(
-                             padding: const EdgeInsets.only(right: 15,left: 15),
-                             child: Card(
-                               color: Color(0xFFE3E4FA),
-                               elevation: 4,
-                               shape: RoundedRectangleBorder(
-                                 borderRadius: BorderRadius.circular(15),
-                               ),
-                               child: Row(
-                                 mainAxisAlignment: MainAxisAlignment.center,
-                                 children: [
-                                   CircleAvatar(
-                                     radius: 25,
-                                     backgroundColor: Color(0xFF0F52BA),
-                                     child: Text("U2",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),),
-                                   ),
-                                   Padding(
-                                     padding: const EdgeInsets.only(left: 20.0,right: 20),
-                                     child: Text("User 2 [Flat 2] : Message 2",style: TextStyle(
-                                         fontWeight: FontWeight.bold,fontSize: 18
-                                     ),),
-                                   )
-                                 ],
+                   child: FittedBox(
+                     fit: BoxFit.fitWidth,
+                     child: Card(
+                       elevation: 4,
+                       shape: RoundedRectangleBorder(
+                         borderRadius: BorderRadius.circular(15),
+                       ),
+                       child: Column(
+                         children: [
+                           Text("Messages",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                           SizedBox(height: 15,),
+                           SizedBox(
+                             height: 65,
+                             child: Padding(
+                               padding: const EdgeInsets.only(left: 15.0,right: 15),
+                               child: Card(
+                                 color: Color(0xFFE3E4FA),
+                                 elevation: 4,
+                                 shape: RoundedRectangleBorder(
+                                   borderRadius: BorderRadius.circular(15),
+                                 ),
+                                 child: Row(
+                                   mainAxisAlignment: MainAxisAlignment.center,
+                                   children: [
+                                     CircleAvatar(
+                                       radius: 25,
+                                       backgroundColor: Color(0xFF0F52BA),
+                                       child: Text("U1",style: TextStyle(fontSize: 20,color: Colors.white),),
+                                     ),
+                                     Padding(
+                                       padding: const EdgeInsets.only(left: 20,right: 20),
+                                       child: Text("User 1 [Flat 1] : Message 1",style: TextStyle(
+                                           fontWeight: FontWeight.bold,fontSize: 18
+                                       ),),
+                                     )
+                                   ],
+                                 ),
                                ),
                              ),
                            ),
-                         ),
-                         Padding(
-                           padding: const EdgeInsets.only(top: 10,left: 250.0),
-                           child: TextButton(onPressed: () {
-        
-                           }, child: Text("Show More",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),)),
-                         ),
-                       ],
+                           SizedBox(height: 2,),
+                           SizedBox(
+                             height: 65,
+                             child: Padding(
+                               padding: const EdgeInsets.only(right: 15,left: 15),
+                               child: Card(
+                                 color: Color(0xFFE3E4FA),
+                                 elevation: 4,
+                                 shape: RoundedRectangleBorder(
+                                   borderRadius: BorderRadius.circular(15),
+                                 ),
+                                 child: Row(
+                                   mainAxisAlignment: MainAxisAlignment.center,
+                                   children: [
+                                     CircleAvatar(
+                                       radius: 25,
+                                       backgroundColor: Color(0xFF0F52BA),
+                                       child: Text("U2",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),),
+                                     ),
+                                     Padding(
+                                       padding: const EdgeInsets.only(left: 20.0,right: 20),
+                                       child: Text("User 2 [Flat 2] : Message 2",style: TextStyle(
+                                           fontWeight: FontWeight.bold,fontSize: 18
+                                       ),),
+                                     )
+                                   ],
+                                 ),
+                               ),
+                             ),
+                           ),
+                           Padding(
+                             padding: const EdgeInsets.only(top: 10,left: 250.0),
+                             child: TextButton(onPressed: () {
+
+                             }, child: Text("Show More",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),)),
+                           ),
+                         ],
+                       ),
                      ),
                    ),
                  ),
@@ -317,9 +329,9 @@ class _HomeState extends State<Home> {
                           ),
 
                           Padding(
-                            padding: const EdgeInsets.only(top: 10,left: 250.0),
+                            padding: const EdgeInsets.only(top: 10,left: 210.0),
                             child: TextButton(onPressed: () {
-        
+
                             }, child: Text("Show More",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),)),
                           ),
                         ],
@@ -331,6 +343,42 @@ class _HomeState extends State<Home> {
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        iconSize: 30,
+        selectedIconTheme: IconThemeData(color: Colors.black),
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.white,
+        onTap: (index) {
+          setState(() {
+            myindex = index;
+          });
+        },
+        currentIndex: myindex,
+        backgroundColor: Color(0xFF0F52BA),
+        type: BottomNavigationBarType.fixed,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home,),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.group),
+              label: "Community"
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: "Settings"
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "Home"
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: "Profile"
+          )
+        ],
       )
     );
   }
