@@ -1,0 +1,12 @@
+MONGODB_URI = ""
+
+JWT_SECRET_KEY = ""
+
+
+//For google auth
+CLIENT_ID = ""
+CLIENT_SECRET = ""
+GOOGLE_REDIRECT_URL = ""
+OAUTH_STRING_2 = ""
+
+OAUTH_STRING = ""

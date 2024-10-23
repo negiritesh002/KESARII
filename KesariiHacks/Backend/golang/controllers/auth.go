@@ -112,7 +112,7 @@ func Signup(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 
 	// Log the incoming request
-	fmt.Println("Received signup request")
+	fmt.Println("Received signup request Demo Tanuj")
 
 	// Decode the JSON request body
 	var user models.User
@@ -174,7 +174,7 @@ func Signup(w http.ResponseWriter, r *http.Request) {
 	mobileFilter := bson.M{"mobilenumber": user.MobileNumber}
 	err = database.DBcollection.FindOne(context.TODO(), mobileFilter).Decode(&existingUser)
 	if err == nil {
-		http.Error(w, "Mobile Number already exists", http.StatusConflict)
+		http.Error(w, "Mobile Number already exists (Tanuj's Number)", http.StatusConflict)
 		return
 	}
 
@@ -250,7 +250,7 @@ func Signin(w http.ResponseWriter, r *http.Request) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 	tokenString, err := token.SignedString(jwtKey)
 	if err != nil {
-		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		http.Error(w, "Internal Server Error (Tanuj's Server)", http.StatusInternalServerError)
 		return
 	}
 
